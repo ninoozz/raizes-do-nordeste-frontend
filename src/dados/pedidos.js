@@ -1,0 +1,115 @@
+export const nomeDoCanal = {
+  app: 'App',
+  totem: 'Totem',
+  balcao: 'Balcão',
+}
+
+export const nomeDoStatus = {
+  'aguardando-pagamento': 'Aguardando pagamento',
+  'pagamento-pendente': 'Pagamento pendente',
+  'pagamento-recusado': 'Pagamento recusado',
+  recebido: 'Recebido',
+  'em-preparo': 'Em preparo',
+  pronto: 'Pronto',
+  retirado: 'Retirado',
+  cancelado: 'Cancelado',
+}
+
+const agora = Date.now()
+const minutos = 60 * 1000
+
+export const pedidosDeHoje = [
+  {
+    numero: 1036,
+    canal: 'totem',
+    lojaId: 'boa-viagem',
+    consumo: 'levar',
+    itens: [
+      { id: 'tapioca-queijo', nome: 'Tapioca de queijo coalho', preco: 14, quantidade: 1 },
+      { id: 'cafe-coado', nome: 'Café coado', preco: 4, quantidade: 1 },
+    ],
+    subtotal: 18,
+    desconto: 0,
+    total: 18,
+    status: 'retirado',
+    criadoEm: agora - 52 * minutos,
+    horarios: {},
+  },
+  {
+    numero: 1037,
+    canal: 'app',
+    lojaId: 'boa-viagem',
+    retirada: 'balcao',
+    itens: [{ id: 'cuscuz-recheado', nome: 'Cuscuz recheado', preco: 18, quantidade: 1 }],
+    subtotal: 18,
+    desconto: 0,
+    total: 18,
+    status: 'cancelado',
+    criadoEm: agora - 35 * minutos,
+    horarios: {},
+    cancelamento: { motivo: 'Cliente desistiu', quem: 'Ana Paula', quando: agora - 31 * minutos },
+  },
+  {
+    numero: 1038,
+    canal: 'balcao',
+    lojaId: 'boa-viagem',
+    itens: [
+      { id: 'tapioca-carne', nome: 'Tapioca de carne de sol', preco: 18, quantidade: 1 },
+      { id: 'suco-caja', nome: 'Suco de cajá', preco: 8, quantidade: 1 },
+    ],
+    subtotal: 26,
+    desconto: 0,
+    total: 26,
+    status: 'pronto',
+    criadoEm: agora - 16 * minutos,
+    horarios: {},
+  },
+  {
+    numero: 1039,
+    canal: 'app',
+    lojaId: 'boa-viagem',
+    retirada: 'pickup',
+    itens: [
+      { id: 'canjica', nome: 'Canjica', preco: 9, quantidade: 2 },
+      { id: 'tapioca-queijo', nome: 'Tapioca de queijo coalho', preco: 14, quantidade: 1 },
+    ],
+    subtotal: 32,
+    desconto: 3.2,
+    cupom: 'SAOJOAO10',
+    total: 28.8,
+    status: 'em-preparo',
+    criadoEm: agora - 12 * minutos,
+    horarios: { recebido: agora - 12 * minutos, 'em-preparo': agora - 8 * minutos },
+  },
+  {
+    numero: 1040,
+    canal: 'balcao',
+    lojaId: 'boa-viagem',
+    itens: [
+      { id: 'cuscuz-charque', nome: 'Cuscuz com charque', preco: 20, quantidade: 1 },
+      { id: 'cafe-coado', nome: 'Café coado', preco: 4, quantidade: 2 },
+    ],
+    subtotal: 28,
+    desconto: 0,
+    total: 28,
+    status: 'em-preparo',
+    criadoEm: agora - 6 * minutos,
+    horarios: {},
+  },
+  {
+    numero: 1041,
+    canal: 'totem',
+    lojaId: 'boa-viagem',
+    consumo: 'aqui',
+    itens: [
+      { id: 'tapioca-coco', nome: 'Tapioca de coco', preco: 12, quantidade: 1 },
+      { id: 'suco-caja', nome: 'Suco de cajá', preco: 8, quantidade: 1 },
+    ],
+    subtotal: 20,
+    desconto: 0,
+    total: 20,
+    status: 'recebido',
+    criadoEm: agora - 3 * minutos,
+    horarios: {},
+  },
+]

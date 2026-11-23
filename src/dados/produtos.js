@@ -1,0 +1,82 @@
+export const categorias = [
+  { id: 'tapiocas', nome: 'Tapiocas' },
+  { id: 'cuscuz', nome: 'Cuscuz' },
+  { id: 'doces', nome: 'Doces' },
+  { id: 'bebidas', nome: 'Bebidas' },
+]
+
+export const produtos = [
+  {
+    id: 'tapioca-queijo',
+    nome: 'Tapioca de queijo coalho',
+    descricao: 'Queijo coalho na chapa com manteiga de garrafa.',
+    preco: 14,
+    categoria: 'tapiocas',
+  },
+  {
+    id: 'tapioca-carne',
+    nome: 'Tapioca de carne de sol',
+    descricao: 'Carne de sol desfiada com queijo coalho.',
+    preco: 18,
+    categoria: 'tapiocas',
+  },
+  {
+    id: 'tapioca-coco',
+    nome: 'Tapioca de coco',
+    descricao: 'Coco ralado e leite condensado.',
+    preco: 12,
+    categoria: 'tapiocas',
+  },
+  {
+    id: 'cuscuz-recheado',
+    nome: 'Cuscuz recheado',
+    descricao: 'Ovo, queijo coalho e manteiga de garrafa.',
+    preco: 18,
+    categoria: 'cuscuz',
+  },
+  {
+    id: 'cuscuz-charque',
+    nome: 'Cuscuz com charque',
+    descricao: 'Charque acebolada e queijo.',
+    preco: 20,
+    categoria: 'cuscuz',
+    somenteCozinhaCompleta: true,
+  },
+  {
+    id: 'bolo-macaxeira',
+    nome: 'Bolo de macaxeira',
+    descricao: 'Fatia do bolo da casa.',
+    preco: 8,
+    categoria: 'doces',
+  },
+  {
+    id: 'canjica',
+    nome: 'Canjica',
+    descricao: 'Milho verde, leite de coco e canela.',
+    preco: 9,
+    categoria: 'doces',
+    saoJoao: true,
+  },
+  {
+    id: 'pamonha',
+    nome: 'Pamonha',
+    descricao: 'Pamonha doce feita na palha.',
+    preco: 7,
+    categoria: 'doces',
+    saoJoao: true,
+  },
+  {
+    id: 'suco-caja',
+    nome: 'Suco de cajá',
+    descricao: 'Copo de 400 ml.',
+    preco: 8,
+    categoria: 'bebidas',
+  },
+  {
+    id: 'cafe-coado',
+    nome: 'Café coado',
+    descricao: 'Copo de 200 ml.',
+    preco: 4,
+    categoria: 'bebidas',
+  },
+]
